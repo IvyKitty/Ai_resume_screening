@@ -52,7 +52,7 @@ if uploaded_files and job_description:
     scores = rank_resumes(job_description,resumes)
 
    # display scores 
-    results = pd.Dataframe({"Resume":[file.name for file in uploaded_files], "Score": scores})
+    results = pd.DataFrame({"Resume":[file.name for file in uploaded_files], "Score": scores})
     results = results.sort_values(by="Score", acending=False)
 
     st.write(results)
